@@ -83,5 +83,17 @@ namespace Tests
 
             Assert.AreEqual(expectedIsRight, isRight);
         }
+
+        [Test]
+        public void TestCircleSquare()
+        {
+            const double expectedSquare = 12.57;
+
+            var circle = new Circle(2);
+
+            var square = Math.Round(circle.Square, 2);
+
+            Assert.AreEqual(expectedSquare, square);
+        }
     }
 }

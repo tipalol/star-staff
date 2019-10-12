@@ -7,15 +7,21 @@ namespace star_staff.src.core.figures
         /// <summary>
         /// Returns radius of this circle
         /// </summary>
-        public int Radius { get; }
+        public uint Radius { get; }
 
         /// <summary>
         /// Returns square of this circle
         /// </summary>
-        public double Square { get; }
+        public double Square {
+            get => Math.PI * Radius * Radius;
+        }
         #endregion
 
-        public Circle(int radius)
+        /// <summary>
+        /// Returns created circle
+        /// </summary>
+        /// <param name="radius">Radius</param>
+        public Circle(uint radius)
         {
             Radius = radius;
         }
