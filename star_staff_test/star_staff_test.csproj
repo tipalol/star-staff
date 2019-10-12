@@ -15,4 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\star_staff\star_staff.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="UnitTest1 %28копировать%29.cs" />
+  </ItemGroup>
 </Project>
