@@ -9,4 +9,7 @@
     <Folder Include="src\core\" />
     <Folder Include="src\core\figures\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="src\core\Figure.cs" />
+  </ItemGroup>
 </Project>

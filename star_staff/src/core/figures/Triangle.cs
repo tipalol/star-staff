@@ -20,7 +20,7 @@ namespace star_staff.src.core.figures
         /// Returns half perimeter of this triangle
         /// </summary>
         public double HalfPerimeter {
-            get => Perimeter / 2;
+            get => Perimeter / 2d;
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace star_staff.src.core.figures
         /// In Gerone formule we have 1 divide operator and 3 multiply operators
         /// However, even to check rightness we have to calculate multiply operation
         /// 9 (!) times
-        public double GetSquare {
+        public double Square {
             get {
                 double p = HalfPerimeter;
                 double QuadroSquare = p * (p - A) * (p - B) * (p - C);
@@ -50,7 +50,17 @@ namespace star_staff.src.core.figures
         }
         #endregion
 
+        /// <summary>
+        /// Returns created triangle or null if this can not exist.
+        /// Throws <see cref="InvalidFigureException"/>
+        /// </summary>
+        /// <param name="a">A side</param>
+        /// <param name="b">B side</param>
+        /// <param name="c">C side</param>
         public Triangle(int a, int b, int c) {
+            if (A + B > C || A + C > B || B + C > A)
+                throw new InvalidCastException("Cannot create triangle with these parameters");
+
             A = a;
             B = b;
             C = c;
