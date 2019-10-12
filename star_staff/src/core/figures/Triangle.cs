@@ -5,14 +5,14 @@ namespace star_staff.src.core.figures
     {
         #region properties
         //Sides of triangle
-        public int A { get; }
-        public int B { get; }
-        public int C { get; }
+        public uint A { get; }
+        public uint B { get; }
+        public uint C { get; }
 
         /// <summary>
         /// Returns perimeter of this triangle
         /// </summary>
-        public int Perimeter {
+        public uint Perimeter {
             get => A + B + C;
         }
 
@@ -57,7 +57,7 @@ namespace star_staff.src.core.figures
         /// <param name="a">A side</param>
         /// <param name="b">B side</param>
         /// <param name="c">C side</param>
-        public Triangle(int a, int b, int c) {
+        public Triangle(uint a, uint b, uint c) {
             if (A + B > C || A + C > B || B + C > A)
                 throw new InvalidCastException("Cannot create triangle with these parameters");
 
