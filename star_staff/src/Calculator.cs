@@ -1,10 +1,12 @@
 ﻿using System;
+using star_staff.src.core;
+
 namespace star_staff.src
 {
-    public class Calculator
+    public static class Calculator
     {
-        public Calculator()
-        {
-        }
+
+        public static double CalculateSquare(IFigure figure) => figure.Square;
+
     }
 }
