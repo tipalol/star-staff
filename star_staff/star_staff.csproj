@@ -6,5 +6,7 @@
 
   <ItemGroup>
     <Folder Include="src\" />
+    <Folder Include="src\core\" />
+    <Folder Include="src\core\figures\" />
   </ItemGroup>
 </Project>
